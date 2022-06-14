@@ -1,0 +1,917 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/* VARIABLES */
+:root{
+    --padding-container: 100px 0;
+    --color-title: #242F9B;
+    --color-primario: #293462;
+    --color-secundario: #FFCD38;
+    --color-terciario: #0c5adb;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Mulish', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+
+/* ************** HEADER **************** */
+.nav{
+    width: 100%;
+    box-shadow: 2px 2px 10px rgba(128, 128, 128, 0.439);
+    position: fixed;
+    margin-top: 0px;
+    background-color: white;
+    z-index: 10;
+}
+
+.nav__contenedor{
+    margin: auto;
+    width: 90%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a{
+    color: var(--color-terciario);
+    font-size: 29px;
+    font-weight: 800;
+}
+
+.menu ul{
+    display: flex;
+}
+
+.menu ul li{
+    margin-right: 19px;
+    list-style: none;
+}
+
+.menu ul li a{
+    color: gray;
+    font-size: 18px;
+}
+
+
+/* ******************* SECCION HEAD **************** */
+.head{
+    padding-top: 85px;
+}
+
+.head__contenedor{
+    display: flex;
+}
+
+.head_titulo{
+    width: 100%;
+    padding: 100px 48px 100px 150px;
+    animation-name: mover;
+    animation-duration: 3s;
+    animation-direction: normal;
+}
+
+.head_titulo h1{
+    font-size: 60px;
+    color: #232323;
+    font-weight: 800;
+}
+
+@keyframes mover{
+    from{
+        transform: translateX(-100%);
+        color: white;
+        
+    }
+    to{
+        transform: translateX(0%);
+        color: #232323;
+        opacity: 1;
+    }
+}
+
+.head_titulo .spanh1{
+    color: var(--color-secundario);
+}
+
+.head_titulo p{
+    padding: 20px 0px;
+    font-size: 17px;
+    color: gray;
+}
+
+.head_btns{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.head_btns a{
+    padding: 18px 20px;
+    border: 1px solid var(--color-terciario);
+    margin-right: 19px;
+    color: var(--color-terciario);
+    font-size: 18px;
+    transition: all .5s;
+}
+
+.head_btns a:hover{
+    background-color: var(--color-terciario);
+    color: white;
+}
+
+.head_imagen{
+    width: 100%;
+    margin-top: 40px;
+}
+
+.head_imagen img{
+    width: 100%;
+}
+
+
+/* ************* SECCION DE TARJETAS WEB *********** */
+
+.tarjetas__web{
+    margin: 50px auto;
+}
+
+.tarjetas_contenedor{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.tarjeta{
+    width: 180px;
+    height: 200px;
+    border: 1px solid var(--color-terciario);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 4px 7px 7px #0000004a;
+    transition:  bottom 1s;
+    transition:  background-color .1s;
+    position: relative;
+    overflow: hidden;
+}
+
+.web_icon{
+    font-size: 30px;
+    color: white;
+    width: 75px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-terciario);
+    border-radius: 50%;
+}
+
+.tarjeta > h2{
+    color: gray;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.web_descripcion{
+    position: absolute;
+    bottom: -100px;
+    color: white;
+    padding: 10px 20px;
+}
+.web_descripcion > .descripcion_icon{
+    color: white;
+    font-size: 25px;
+}
+.web_descripcion > h2{
+    font-size: 19px;
+}
+.web_descripcion > p{
+    font-size: 14px;
+}
+
+.tarjeta:hover{
+    background-color: var(--color-terciario);
+}
+
+.tarjeta:hover > h2,
+.tarjeta:hover > .web_icon{
+    display: none;
+}
+
+.tarjeta:hover .web_descripcion {
+    bottom: 40px;
+}
+
+
+/* ***************** SECCION DE BENEFICIOS ************************ */
+/* .beneficios{
+    background-color: gray;
+}
+
+.beneficios__contenedor{
+    width: 60%;
+    margin: auto;
+    padding: 50px 0px;
+}
+
+.beneficio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.beneficio_imagen{
+    width: 250px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid gray;
+    background-color: white;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.beneficio_imagen img{
+    width: 100%;
+}
+
+.beneficio_texto{
+    width: 100%;
+} */
+
+
+
+/* Testimony */
+
+.beneficios{
+    background-color: #e5e5f7;
+    padding-top: 35px;
+}
+
+.beneficios__titulo{
+    text-align: center;
+    font-size: 56px;
+}
+
+.beneficios__contenedor{
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    gap: 1em;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    padding: 24px 0px;
+}
+
+.beneficio{
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.beneficio__show{
+    pointer-events: unset;
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.beneficio_imagen img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 50% 30%;
+}
+
+.beneficio_texto{
+    max-width: 700px;
+}
+
+.beneficio_texto .subtitle{
+    color: var(--color-title);
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.testimony__course{
+    background-color: royalblue;
+    color: #fff;
+    display: inline-block;
+    padding: 5px;
+}
+
+.testimony__review{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.testimony__arrow{
+    width: 90%;
+    cursor: pointer;
+}
+
+
+/* ****************** SERVICIOS ******************** */
+
+.servicios{
+    padding: 50px 0px;
+}
+
+.servicios__contenedor{
+    width: 90%;
+    margin: auto;
+}
+
+.servicios__contenedor h2{
+    font-size: 55px;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 10px var(--color-terciario);
+    margin: 15px 0px;
+    text-transform: uppercase;
+}
+
+.servicios_cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.servicio_card{
+    max-width: 300px;
+    /* height: 300px; */
+    margin: 10px 20px;
+    border: 2px solid var(--color-terciario);
+    padding: 15px;
+    text-align: center;
+    border-radius: 6px;
+    transition: all .3s;
+    position: relative;
+}
+
+.servicio_card:hover{
+    margin-top: 5px;
+}
+
+.icon{
+    width: 70px;
+    height: 70px;
+    font-size: 34px;
+    color: var(--color-terciario);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px auto;
+}
+
+.servicio_card > h3{
+    font-size: 27px;
+    margin: 11px 11px 7px 11px;
+}
+
+.hr__servicios{
+    width: 40%;
+    height: 2px;
+    margin: 0 auto;
+    color: var(--color-terciario);
+}
+
+.servicio_card > p{
+    color: rgb(84, 82, 82);
+    font-size: 16px;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 70px;
+}
+
+.servicio_card > a{
+    padding: 10px;
+    border: 1px solid var(--color-terciario);
+    color: 500;;
+    transition: all .5s;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 10px;
+    left: 110px;
+}
+
+.servicio_card:hover a{
+    background-color: var(--color-terciario);
+    color: white;
+    font-weight: 500;
+}
+
+.servicio_card:hover .icon{
+    background-color: var(--color-terciario);
+    color: white;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.servicio_card:hover .iconApp{
+    font-size: 28px;
+}
+
+.servicio_BONO{
+    width: 700px;
+    height: 240px;
+    margin: 10px 20px;
+    border: 2px solid var(--color-title);
+    padding: 15px;
+    text-align: center;
+    border-radius: 6px;
+    background-color: #e5e5f7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/* ****************** PLAN DE TRABAJO ******************** */
+
+.planTrabajo{
+    background-color: #0c5adb;
+    margin: 100px 0px 330px 0px;
+}
+
+.planTrabajo__contenedor{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.planTrabajo_titulo{
+    color: white;
+    padding-bottom: 160px;
+}
+
+.planTrabajo_titulo > h2{
+    font-size: 50px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 800;
+    padding-top: 75px;
+    text-shadow: 2px 4px 10px #00000094;
+}
+
+.planTrabajo_titulo > p{
+    font-size: 20px;
+    width: 64%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 15px;
+    text-shadow: 1px 2px 4px #000000c2;
+}
+
+
+.planTrabajo_cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    background-color: white;
+    position: absolute;
+    bottom: -100px;
+    box-shadow: 7px 6px 15px #80808075;
+    border-radius: 10px;
+    padding: 40px;
+}
+
+.planTrabajo_card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 251px;
+    margin: 10px 0px;
+}
+
+.plan2, .plan3, .plan4, .plan5{
+    border-left: 1px solid #0c5adb;
+}
+
+.planTrabajo_card > h3{
+    font-size: 55px;
+    font-weight: 900;
+    text-shadow: 0px 0px 6px #0c5adbdb;
+    color: white;
+}
+
+.planTrabajo_card > p{
+    width: 75%;
+    font-size: 20px;
+    font-weight: 400;
+    color: gray;
+}
+
+
+/* ****************** NOSOTROS ******************** */
+
+.nosotros{
+    background: #111a3a;
+}
+
+.nosotros__contenedor{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    padding: 100px 0px;
+}
+
+.nosotros_imagen{
+    width: 1006px;
+}
+
+.nosotros_imagen img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.nosotros_texto{
+    width: 100%;;
+    color: white;
+    padding: 40px 10px 0px 50px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.nosotros_texto-frase h2{
+    font-size: 40px;
+    text-transform: uppercase;
+    margin: 10px 0px;
+}
+
+.nosotros_texto-frase p{
+    font-size: 19px;
+    
+}
+
+.nosotros_texto-equipo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    bottom: 0px;
+    width: 90%;
+}
+
+.equipo{
+    width: 150px;
+    height: 250px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    
+    overflow: hidden;
+    text-align: center;
+}
+
+.equipo img{
+    border-radius: 50%;
+    margin: 10px;
+}
+
+
+
+/* ****************** EQUIPO DE TRABAJO ******************** */
+
+.equipoAgencia{
+    margin: 100px 0px;
+}
+
+.equipoAgencia_contenedor{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.desarrollador{
+    width: 243px;
+    margin: 15px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.foto_desarrollador{
+    width: 200px;
+    height: 200px;
+    /* border: 1px solid gray; */
+    border-radius: 50%;
+    box-shadow: 5px 4px 6px gray;
+    margin-bottom: 14px;
+}
+
+.foto_desarrollador img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+.desarrollador > p{
+    width: 65%;
+}
+
+
+/* ****************** FOOTER ******************** */
+
+.footer{
+    background-color: #0c5adb;
+    height: 200px;
+}
+
+.footer__contenedor{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 40px;
+    color: white;
+}
+
+.cont{
+    text-align: center;
+}
+
+.footer_icon{
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.cont > h3 {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+.cont > p {
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+
+
+
+@media screen and (max-width: 1200px ) {
+
+    /* HEAD */
+    .head_titulo{
+        padding: 100px 48px 100px 100px;
+    }
+
+    .head_imagen{
+        margin-top: 80px;
+    }
+    
+    /* PLAN DE TRABAJO */
+    .planTrabajo_cards{
+        bottom: -250px;
+    }
+}
+
+@media screen and (max-width: 1050px ){
+
+    /* HEAD */
+    .head__contenedor{
+        position: relative;
+    }
+
+    .head_titulo{
+        z-index: 5;
+        width: 70%;
+    }
+
+    .head_imagen{
+        position: absolute;
+        margin-top: 0px;
+        width: 60%;
+        top: 10px;
+        right: 0;
+        opacity: .5;
+    }
+
+    /* TARJETAS WEB */
+
+    .tarjeta{
+        margin: 10px 15px;
+    }
+
+}
+
+@media screen and (max-width: 941px ){
+
+    /* TARJETAS WEB */
+    .tarjetas_contenedor{
+        justify-content: center;
+    }
+
+
+    /* PLAN DE TRABAJO */
+    .plan1{
+        border-left: 1px solid #0c5adb;
+    }
+    .plan2, .plan4{
+        border-right: 1px solid #0c5adb;
+    }
+}
+
+@media screen and (max-width: 780px ){
+
+    /* HEAD */
+    .head_titulo{
+        padding: 100px 48px 100px 50px;
+    }
+    
+    .head_titulo h1{
+        font-size: 50px;
+    }
+
+    .head_btns{
+        width: 100%;
+    }
+
+    .head_btns a{
+        padding: 14px 15px;
+    }
+
+    /* SERVICIOS */
+
+    .servicios__contenedor{
+        width: 95%;
+    }
+    .servicio_card{
+        max-width: 280px;
+    }
+
+    .servicio_card > a{
+        left: 75px;
+    }
+    .servicio_BONO{
+        max-width: 650px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 695px ){
+
+    /* HEAD */
+
+    .head_titulo{
+        padding: 100px 10px 100px 40px;
+        width: 80%;
+    }
+
+    .tarjetas_contenedor{
+        width: 95%;
+    }
+
+    /* SERVICIO */
+    .servicio_BONO{
+        width: 500px;
+    }
+
+    /* NOSOTROS */
+
+    .nosotros__contenedor{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 665px ){
+
+    /*  PLAN DE TRABAJO */
+    .planTrabajo_cards{
+        bottom: -270px;
+        
+        justify-content: start;
+    }
+
+    .planTrabajo_card{
+        width: 150px;
+    }
+
+    .plan2{
+        border-right: none;
+    }
+
+    .plan3{
+        border-right: 1px solid #0c5adb;
+    }
+}
+
+@media screen and (max-width: 360px ){
+
+    /* HEADER */
+
+    .nav__contenedor{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo{
+        margin-bottom: 5px;
+    }
+
+    /* HEAD */
+
+    .head__contenedor{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .head_titulo{
+        padding: 100px 10px 100px 10px;
+        width: 360px;
+    }
+
+    .head_titulo h1{
+        width: 100%;
+        font-size: 60px;
+        
+    }
+
+    .head_titulo p{
+        width: 100%;
+        font-size: 25px;
+        
+    }
+
+    .head_imagen{
+        position: absolute;
+        margin-top: 0px;
+        width: 140%;
+        top: 140px;
+        left: 100px;
+        opacity: .5;
+    }
+
+    .head_btns a{
+        margin-bottom: 10px;
+    }
+
+    /* PLAN DE TRABAJO */
+
+    .planTrabajo{
+        margin: 100px 0px 630px 0px;
+    }
+    .planTrabajo_cards{
+        bottom: -600px;
+    }
+
+    .planTrabajo_cards{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .plan1, .plan2{
+        border-right: 1px solid #0c5adb;
+    }
+
+}
